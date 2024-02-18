@@ -36,6 +36,7 @@ model Service {
   barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
   description  String
   bookings     Booking[]
+  imageUrl     String
 }
 
 // Um agendamento vai pertercer a 1 usuario, 1 serviço e a barbearia
