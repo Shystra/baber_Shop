@@ -33,12 +33,13 @@ const BarbershopDetailsPage = async ({ params }: IBarbershopDetails) => {
     }
     return <div>
         <BarbershopInfo barberShop={barberShop} />
-        
-        {barberShop.services.map((service) => {
-            return <ServiceItem key={service.id} service={service}/>
-        })}
-    </div> 
-    
+
+        <div className="px-5 flex flex-col gap-4 py-6">
+            {barberShop.services.map((service) => {
+                return <ServiceItem key={service.id} service={service} />
+        })}</div>
+    </div>
+
 }
 
 export default BarbershopDetailsPage;
